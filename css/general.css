@@ -1,0 +1,116 @@
+@font-face {
+    font-family: "toruk";
+    src: url('../fonts/toruk-sc.otf') format("opentype");
+    font-weight: normal;
+}
+
+:root {
+    --background-gradient: radial-gradient(circle, rgb(233, 233, 233) 0%, rgba(59,176,208,1) 100%);
+    --primary-font: "toruk";
+    --font-color-primary: #594407;
+    --font-color-secondary: #937007;
+    
+    --container-bg-color: #FFF1B7;
+    --container-border-color: var(--font-color-primary);
+    --container-border-radius: 18px;
+
+    --input-bg-color: var(--container-bg-color);
+    --input-border-color: var(--font-color-primary);
+    --input-border-radius: 18px;
+    --input-font-size: 18px;
+
+    --button-bg-color: var(--font-color-primary);
+    --button-hover-bg-color: #413204;
+    --button-text-color: var(--container-bg-color);
+    --button-font-size: 24px;
+    --button-border-radius: 18px;
+}
+
+body {
+    background: var(--background-gradient);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+h1, h2, h3, p, a, li, button, input, div, span, ul {
+    font-family: var(--primary-font);
+    transition: background-color 0.3s, color 0.3s;
+    margin: 0;
+}
+
+.usual-input {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 4px solid var(--input-border-color);
+    border-radius: var(--input-border-radius);
+    box-sizing: border-box;
+    font-size: var(--input-font-size);
+    color: var(--font-color-primary);
+    background-color: var(--input-bg-color);
+}
+
+.usual-input:focus {
+    color: var(--font-color-primary);
+    outline: none;
+}
+
+.usual-input::placeholder {
+    color: var(--font-color-secondary);
+}
+
+.usual-button {
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+    padding: 10px 20px;
+    border: none;
+    border-radius: var(--button-border-radius);
+    cursor: pointer;
+    font-size: var(--button-font-size);
+}
+
+.usual-button:hover {
+    background-color: var(--button-hover-bg-color);
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 33px;
+    left: 33px;
+    background-color: var(--container-bg-color);
+    border: 4px solid var(--container-border-color);
+    border-radius: 60px;
+    width: 52px;
+    height: 52px;
+    cursor: pointer;
+    font-size: 40px;
+    color: var(--font-color-primary);
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.button-outline {
+    background-color: var(--input-bg-color);
+    color: var(--button-bg-color);
+    border: 4px solid var(--button-bg-color);
+    padding: 10px 20px;
+    border-radius: var(--button-border-radius);
+    cursor: pointer;
+    font-size: var(--button-font-size);
+}
+
+.button-outline:hover, .info:hover {
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+}

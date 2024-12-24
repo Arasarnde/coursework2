@@ -1,0 +1,65 @@
+:root {
+    --background-gradient: radial-gradient(circle, rgb(233, 233, 233) 0%, rgba(59,176,208,1) 100%);
+    --primary-font: "toruk";
+    --font-color-primary: #594407;
+    --font-color-secondary: #937007;
+    
+    --container-bg-color: #FFF1B7;
+    --container-border-color: var(--font-color-primary);
+    --container-border-radius: 18px;
+
+    --input-bg-color: var(--container-bg-color);
+    --input-border-color: var(--font-color-primary);
+    --input-border-radius: 18px;
+    --input-font-size: 18px;
+
+    --button-bg-color: var(--font-color-primary);
+    --button-hover-bg-color: #413204;
+    --button-text-color: var(--container-bg-color);
+    --button-font-size: 24px;
+    --button-border-radius: 18px;
+}
+
+.container {
+    background-color: var(--container-bg-color);
+    border: 4px solid var(--container-border-color);
+    border-radius: var(--container-border-radius);
+    padding: 45px 8% 20px;
+    width: 30%;
+    text-align: center;
+}
+
+.container h1 {
+    color: var(--font-color-primary);
+    font-size: 48px;
+    margin: 0;
+}
+
+.container p {
+    color: var(--font-color-secondary);
+    font-size: 20px;
+    margin: 5px 0 10px;
+}
+
+.container a {
+    color: var(--font-color-secondary);
+}
+
+.container a:hover {
+    color: var(--font-color-primary);
+}
+
+.usual-button {
+    margin-top: 10px;
+}
+
+#message {
+    color: red;
+    font-size: 16px;
+    height: 20px;
+    margin-top: 10px;
+}
+
+.change {
+    padding-top: 10px;
+}
