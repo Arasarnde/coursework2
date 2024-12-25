@@ -6,6 +6,7 @@
     <title>Смена пароля</title>
     <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="css/sign_in.css" />
+    <link rel="icon" href="images/logo.ico" type="image/x-icon">
 </head>
 <body>
     <div class="container">

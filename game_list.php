@@ -38,6 +38,7 @@ function pluralForm($number, $forms) {
     <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="css/game_list.css" />
     <link rel="stylesheet" href="css/info.css" />
+    <link rel="icon" href="images/logo.ico" type="image/x-icon">
     <title>Список игр</title>
 </head>
 <body>

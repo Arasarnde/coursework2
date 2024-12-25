@@ -31,11 +31,11 @@ $message = ""; // По умолчанию ошибок нет
     <link rel="stylesheet" href="css/general.css">
     <link rel="stylesheet" href="css/play.css">
     <link rel="stylesheet" href="css/info.css">
+    <link rel="icon" href="images/logo.ico" type="image/x-icon">
 </head>
 <body>
     <header>
         <?php include 'info.html'; ?>
-        <!-- Подключение скриптов может быть выполнено здесь или в конце body -->
         <script src="js/info-modal.js"></script>
         <div class="button-outline" id="timer">00:00</div>
         <button class="button-outline" id="openExitModal">ВЫЙТИ</button>
@@ -46,7 +46,6 @@ $message = ""; // По умолчанию ошибок нет
 
             <?php if (!empty($players)): ?>
                 <script>
-                    // Передаем информацию о игроках (включая цвет и позицию) в JavaScript
                     const playersData = <?php echo json_encode($players); ?>;
                 </script>
             <?php else: ?>

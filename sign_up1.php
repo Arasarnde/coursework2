@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="css/sign_in.css" />
     <link rel="stylesheet" href="css/info.css" />
+    <link rel="icon" href="images/logo.ico" type="image/x-icon">
 </head>
 <body>
     <div class="container">

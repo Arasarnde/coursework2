@@ -6,6 +6,7 @@
     <title>Вход</title>
     <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="css/sign_in.css" />
+    <link rel="icon" href="images/logo.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/info.css" />
 </head>
 <body>
@@ -40,8 +41,15 @@
                     messageDiv.textContent = response.message || '';
 
                     if (response.success) {
+                        if (response.role === 'admin') {
+                            // Перенаправляем на страницу администратора
+                            window.location.href = 'php/admin_dashboard.php';
+                        } else {
+                            // Перенаправляем на страницу с играми
+                            window.location.href = 'game_list.php';
+                        }
                         // Перенаправление на страницу списка игр
-                        window.location.href = 'game_list.php';
+                        //window.location.href = 'game_list.php';
                     }
                 }
             };
