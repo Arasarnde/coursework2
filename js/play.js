@@ -5,9 +5,9 @@ let timerInterval;
 const gameBoard = document.getElementById('gameBoard');
 let selectedPirate = null;
 let selectedShip = null;
-let selectedPirateId = null; // Глобальная переменная для хранения ID выделенного пирата
+let selectedPirateId = null; 
 
-// === Функция запуска таймера ===
+// Функция запуска таймера
 function startTimer(timeLeft) {
     if (timerInterval) clearInterval(timerInterval);
 
@@ -35,10 +35,9 @@ function startTimer(timeLeft) {
 
 function handleTimeOut() {
     showError('Время истекло! Передача хода следующему игроку.');
-    // TODO: Логика передачи хода следующему игроку
 }
 
-// === Функция для обработки выбора пирата ===
+// Функция для обработки выбора пирата
 function handlePirateSelection(pirate) {
     // Убираем выделение с предыдущего пирата, если он был
     if (selectedPirate) {
@@ -164,7 +163,7 @@ function showError(message) {
 }
 
 
-// === Функция для обработки выбора корабля ===
+// Функция для обработки выбора корабля
 function handleShipSelection(shipElement) {
     if (selectedPirate) {
         showError('Корабль не может быть выбран, пока выбран пират');
@@ -226,18 +225,18 @@ function highlightAvailableMoveCells(shipCellIndex) {
     }
 }
 
-// === Функция для сброса подсветки клеток ===
+// Функция для сброса подсветки клеток
 function resetShipHighlights() {
     clearCellHighlights();
 }
 
-// === Функция для обработки клика по клетке с кораблем ===
+// Функция для обработки клика по клетке с кораблем
 function handleCellClickForShip(event) {
     const targetCell = event.currentTarget;
     moveShipToCell(targetCell);
 }
 
-// === Функция для очистки выделений ===
+// Функция для очистки выделений 
 function clearCellHighlights() {
     const highlightedCells = document.querySelectorAll('.cell.for-ship.highlighted-for-ship');
     highlightedCells.forEach(cell => {
@@ -252,7 +251,7 @@ function clearCellHighlights() {
 }
 
 
-// === Функция для обновления состояния игры с сервера ===
+// Функция для обновления состояния игры с сервера
 function updateGameState() {
 
     fetch(`php/game_update.php?token=${token}&id_room=${idRoom}`)
@@ -315,7 +314,7 @@ function createBoard(roomData) {
                 cell.classList.add('for-ship');
             }
 
-            if (cellData.cell_name === 'не существует' ) { // добавить чтобы несуществующие корабли были пусными
+            if (cellData.cell_name === 'не существует' ) { 
                 cell.classList.add('empty');
             }
 
@@ -420,7 +419,6 @@ function moveShipToCell(cell) {
         .then(data => {
             if (data.success) {
                 const gameState = data.game_state;
-                            // Парсим данные о состоянии игры
                 let parsedGameState;
                 try {
                     parsedGameState = JSON.parse(gameState.move_ship_and_pirates);  // Преобразуем строку JSON в объект

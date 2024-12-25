@@ -53,8 +53,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 const response = JSON.parse(xhr.responseText);
 
                 if (response.success) {
-                    // Обновляем список комнат в сессии и на странице
-                    // Можно перезагрузить страницу или обновить DOM вручную
                     window.location.reload(); // Перезагрузка страницы
                 } else {
                     // Показываем сообщение об ошибке
@@ -74,7 +72,6 @@ document.addEventListener("DOMContentLoaded", () => {
             if (event.target.classList.contains('join-room')) {
                 const roomId = event.target.dataset.id;
                 if (roomId) {
-                    // Переход на страницу с игрой, передаем id комнаты через URL
                     window.location.href = `php/game.php?id_room=${roomId}`;
                 }
             }
