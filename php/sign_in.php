@@ -26,13 +26,15 @@ if ($response && isset($response['result_message']) && $response['result_message
     $_SESSION['token'] = $response['token'];
     $_SESSION['user'] = ['login' => $login];
     $_SESSION['rooms'] = $response['rooms'];
+    $_SESSION['role'] = $response['role'];
 
     // Возвращение успешного ответа
     echo json_encode([
         'success' => true,
         'message' => 'Вы успешно вошли!',
         'token' => $response['token'],
-        'rooms' => $response['rooms']
+        'rooms' => $response['rooms'],
+        'role' => $response['role']
     ]);
 } else {
     // Возвращение сообщения об ошибке
